@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SchollyJob — Scholarships, Jobs, Study Abroad, Fellowships &amp; Career Tips</title>
+<meta name="description" content="SchollyJob covers fully funded scholarships, high-paying remote jobs, study abroad guides, fellowships, and career tips for students and professionals worldwide."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://schollyjob.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="SchollyJob — Scholarships, Jobs, Study Abroad &amp; Career Tips"/>
+<meta property="og:description" content="Fully funded scholarships, remote jobs, study abroad guides, fellowships, and career advice for students and professionals worldwide."/>
+<meta property="og:url" content="https://schollyjob.com/"/>
+<meta property="og:image" content="https://schollyjob.com/src/schollyjob-og.webp"/>
+<link rel="icon" type="image/png" href="https://schollyjob.com/src/favicon-32.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"SchollyJob","url":"https://schollyjob.com/","description":"Fully funded scholarships, high-paying remote jobs, study abroad guides, fellowships, and career tips.","publisher":{"@type":"Organization","name":"SchollyJob","logo":{"@type":"ImageObject","url":"https://schollyjob.com/src/schollyjob-logo.webp"}}}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#faf8f4;--sur:#fff;--ink:#1a1612;--il:#4a4540;--im:#7a7570;
+  --acc:#c8451a;--gold:#d4a017;--brd:#e8e3db;
+  --sch:#1a5c8a;--job:#1a6b3a;--stu:#6b2f8a;--fel:#8a6b1a;--car:#c8451a;
+  --fd:'Playfair Display',Georgia,serif;--fb:'Sora',system-ui,sans-serif;
+  --max:1200px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.con{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* TOP BAR */
+.topbar{background:var(--ink);color:#d4cfc8;font-size:12px;padding:8px 0;text-align:center}
+.topbar a{color:var(--gold);font-weight:600}
+
+/* HEADER */
+header{background:var(--sur);border-bottom:3px solid var(--ink);position:sticky;top:0;z-index:1000}
+.hinner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--fd);font-size:26px;font-weight:800;color:var(--ink);text-decoration:none}
+.logo-i{width:38px;height:38px;background:var(--acc);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-family:var(--fd);font-weight:800}
+.logo span{color:var(--acc)}
+nav{display:flex;align-items:center;gap:4px}
+.nl{padding:6px 14px;font-size:14px;font-weight:500;color:var(--il);border-radius:4px;transition:.2s;white-space:nowrap;text-decoration:none}
+.nl:hover{color:var(--acc);background:#fdf0eb;text-decoration:none}
+.hb{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:1100}
+.hb span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
+.hb.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hb.open span:nth-child(2){opacity:0}
+.hb.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobnav{display:none;position:fixed;inset:0;background:var(--ink);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.mobnav.open{display:flex}
+.mobnav a{font-family:var(--fd);font-size:28px;font-weight:700;color:#fff;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);width:80%;text-align:center;text-decoration:none}
+.mobnav a:hover{color:var(--acc)}
+
+/* HERO */
+.hero{background:var(--ink);color:#fff;padding:72px 0 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(135deg,transparent 30%,rgba(200,69,26,.12));pointer-events:none}
+.hero-label{display:inline-block;background:var(--acc);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:3px;margin-bottom:20px}
+.hero h1{font-family:var(--fd);font-size:clamp(36px,5vw,64px);font-weight:900;line-height:1.05;letter-spacing:-.025em;max-width:700px;margin-bottom:20px}
+.hero h1 span{color:var(--acc)}
+.hero p{font-size:18px;color:#b0aba4;max-width:540px;line-height:1.7;margin-bottom:32px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-p{background:var(--acc);color:#fff;padding:13px 28px;border-radius:4px;font-weight:600;font-size:15px;transition:.2s;text-decoration:none}
+.btn-p:hover{background:#a33614;text-decoration:none;color:#fff}
+.btn-o{background:transparent;color:#fff;padding:13px 28px;border-radius:4px;font-weight:600;font-size:15px;border:1.5px solid rgba(255,255,255,.3);transition:.2s;text-decoration:none}
+.btn-o:hover{border-color:#fff;text-decoration:none;color:#fff}
+.hero-stats{display:flex;gap:40px;margin-top:48px;flex-wrap:wrap}
+.stat-n{font-family:var(--fd);font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:13px;color:#7a7570;margin-top:2px}
+
+/* FILTER */
+.filter-wrap{background:var(--sur);border-bottom:1px solid var(--brd);position:sticky;top:68px;z-index:900}
+.filter-inner{display:flex;overflow-x:auto;scrollbar-width:none}
+.filter-inner::-webkit-scrollbar{display:none}
+.ftab{padding:14px 22px;font-size:13px;font-weight:600;cursor:pointer;color:var(--im);border-bottom:3px solid transparent;background:none;border-top:none;border-left:none;border-right:none;white-space:nowrap;transition:.2s;font-family:var(--fb)}
+.ftab:hover{color:var(--ink)}
+.ftab.active{color:var(--acc);border-bottom-color:var(--acc)}
+
+/* LAYOUT */
+.page-wrap{padding:60px 0 80px}
+.layout{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:start}
+
+/* SECTION HEAD */
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+.sec-title{font-family:var(--fd);font-size:22px;font-weight:800;color:var(--ink);display:flex;align-items:center;gap:10px}
+.sec-title::before{content:'';display:inline-block;width:4px;height:20px;background:var(--acc);border-radius:2px}
+.sec-all{font-size:13px;font-weight:600;color:var(--acc)}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:48px}
+.card{background:var(--sur);border:1px solid var(--brd);border-radius:6px;overflow:hidden;text-decoration:none;color:var(--ink);transition:.25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.1);text-decoration:none}
+.card-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#e8e3db}
+.card-body{padding:16px 18px;flex:1;display:flex;flex-direction:column}
+.ctag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:3px;color:#fff;margin-bottom:10px}
+.t-sch{background:var(--sch)}.t-job{background:var(--job)}.t-stu{background:var(--stu)}.t-fel{background:var(--fel)}.t-car{background:var(--car)}
+.card-title{font-family:var(--fd);font-size:16px;font-weight:700;line-height:1.3;color:var(--ink);margin-bottom:8px;flex:1}
+.card-meta{font-size:12px;color:var(--im);display:flex;gap:10px;margin-top:auto;flex-wrap:wrap}
+.card-feat{grid-column:1/-1;flex-direction:row}
+.card-feat .card-img{width:40%;aspect-ratio:auto;min-height:220px}
+.card-feat .card-body{padding:24px 28px}
+.card-feat .card-title{font-size:20px;margin-bottom:12px}
+.card-feat .card-desc{font-size:14px;color:var(--il);line-height:1.65;margin-bottom:14px}
+
+/* AD */
+.ad-unit{background:var(--sur);border:1px dashed var(--brd);border-radius:4px;padding:28px;text-align:center;color:var(--im);font-size:13px;margin-bottom:40px}
+
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:32px}
+.sb-box{background:var(--sur);border:1px solid var(--brd);border-radius:6px;overflow:hidden}
+.sb-head{background:var(--ink);color:#fff;padding:12px 18px;font-family:var(--fd);font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.sb-body{padding:18px}
+.sb-post{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--brd);text-decoration:none;color:var(--ink)}
+.sb-post:last-child{border-bottom:none;padding-bottom:0}
+.sb-post:hover .sb-ptitle{color:var(--acc)}
+.sb-pimg{width:64px;height:48px;object-fit:cover;border-radius:4px;background:#e8e3db;flex-shrink:0}
+.sb-ptag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--acc);margin-bottom:3px}
+.sb-ptitle{font-family:var(--fd);font-size:13px;font-weight:700;line-height:1.3;transition:.2s}
+.cat-list{list-style:none}
+.cat-item a{display:flex;align-items:center;justify-content:space-between;padding:10px 0;font-size:14px;color:var(--il);border-bottom:1px solid var(--brd);text-decoration:none;transition:.2s}
+.cat-item:last-child a{border-bottom:none}
+.cat-item a:hover{color:var(--acc)}
+.cat-count{font-size:12px;background:var(--bg);padding:2px 8px;border-radius:10px;color:var(--im)}
+.nl-form p{font-size:13.5px;color:var(--il);line-height:1.6;margin-bottom:14px}
+.nl-inp{width:100%;padding:10px 14px;border:1.5px solid var(--brd);border-radius:4px;font-family:var(--fb);font-size:14px;color:var(--ink);background:var(--bg);margin-bottom:10px;outline:none;transition:.2s}
+.nl-inp:focus{border-color:var(--acc)}
+.nl-btn{width:100%;background:var(--acc);color:#fff;border:none;border-radius:4px;padding:11px;font-family:var(--fb);font-size:14px;font-weight:600;cursor:pointer;transition:.2s}
+.nl-btn:hover{background:#a33614}
+.tags-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.tag-pill{background:var(--bg);border:1px solid var(--brd);border-radius:20px;padding:5px 13px;font-size:12px;color:var(--il);transition:.2s;text-decoration:none}
+.tag-pill:hover{background:var(--acc);color:#fff;border-color:var(--acc);text-decoration:none}
+
+/* FOOTER */
+footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.fa .logo{color:#fff;margin-bottom:14px;display:flex}
+.fa .logo span{color:var(--acc)}
+.fa p{font-size:13.5px;line-height:1.7;max-width:280px}
+.fc h4{color:#fff;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fc ul a{font-size:13px;color:#6a6560;text-decoration:none;transition:.2s}
+.fc ul a:hover{color:#fff}
+.fbot{border-top:1px solid rgba(255,255,255,.07);padding:18px 0;display:flex;align-items:center;justify-content:space-between;font-size:12px}
+.fbot a{color:#6a6560;text-decoration:none}
+.fbot a:hover{color:#fff}
+.flinks{display:flex;gap:16px}
+
+/* SCROLL TOP */
+.sbt{position:fixed;bottom:28px;right:24px;width:44px;height:44px;background:var(--acc);color:#fff;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 14px rgba(200,69,26,.35);opacity:0;pointer-events:none;transition:.25s;z-index:900}
+.sbt.v{opacity:1;pointer-events:auto}
+
+.cat-section{display:none}
+.cat-section.visible{display:block}
+
+@media(max-width:1024px){.layout{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+  nav{display:none}.hb{display:flex}
+  .hero{padding:52px 0 44px}.hero h1{font-size:32px}.hero-stats{gap:24px}
+  .cards{grid-template-columns:1fr}
+  .card-feat{flex-direction:column}.card-feat .card-img{width:100%;min-height:auto;aspect-ratio:16/9}
+  .sidebar{grid-template-columns:1fr}
+  .fg{grid-template-columns:1fr;gap:24px}
+  .fbot{flex-direction:column;gap:8px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  &#127381; <strong>New:</strong> <a href="https://schollyjob.com/fully-funded-scholarships-2026">Fully Funded Scholarships 2026</a> &nbsp;|&nbsp; <a href="https://schollyjob.com/remote-jobs-pay-5000-month-2026">Remote Jobs Paying $5,000+/Month</a>
+</div>
+
+<header>
+  <div class="con">
+    <div class="hinner">
+      <a href="https://schollyjob.com/" class="logo"><div class="logo-i">S</div>Scholly<span>Job</span></a>
+      <nav>
+        <a href="https://schollyjob.com/" class="nl">Home</a>
+        <a href="https://schollyjob.com/scholarships" class="nl">Scholarships</a>
+        <a href="https://schollyjob.com/jobs" class="nl">Jobs</a>
+        <a href="https://schollyjob.com/study-abroad" class="nl">Study Abroad</a>
+        <a href="https://schollyjob.com/fellowships" class="nl">Fellowships</a>
+        <a href="https://schollyjob.com/career-tips" class="nl">Career Tips</a>
+      </nav>
+      <button class="hb" id="hb" aria-label="Toggle Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobnav" id="mobnav">
+  <a href="https://schollyjob.com/" onclick="cx()">Home</a>
+  <a href="https://schollyjob.com/scholarships" onclick="cx()">Scholarships</a>
+  <a href="https://schollyjob.com/jobs" onclick="cx()">Jobs</a>
+  <a href="https://schollyjob.com/study-abroad" onclick="cx()">Study Abroad</a>
+  <a href="https://schollyjob.com/fellowships" onclick="cx()">Fellowships</a>
+  <a href="https://schollyjob.com/career-tips" onclick="cx()">Career Tips</a>
+</nav>
+
+<section class="hero">
+  <div class="con">
+    <div class="hero-label">2026 Guide</div>
+    <h1>Your Shortcut to <span>Scholarships,</span><br>Jobs &amp; Career Growth</h1>
+    <p>Fully funded scholarships, high-paying remote jobs, study abroad guides, fellowships, and career advice — all verified for 2026.</p>
+    <div class="hero-btns">
+      <a href="https://schollyjob.com/fully-funded-scholarships-2026" class="btn-p">Browse Scholarships</a>
+      <a href="https://schollyjob.com/remote-jobs-pay-5000-month-2026" class="btn-o">Find Remote Jobs</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-n">30</div><div class="stat-l">In-depth Guides</div></div>
+      <div><div class="stat-n">5</div><div class="stat-l">Categories</div></div>
+      <div><div class="stat-n">2026</div><div class="stat-l">Verified &amp; Updated</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="filter-wrap">
+  <div class="con">
+    <div class="filter-inner">
+      <button class="ftab active" data-cat="all">All Articles</button>
+      <button class="ftab" data-cat="scholarships">Scholarships</button>
+      <button class="ftab" data-cat="jobs">Jobs</button>
+      <button class="ftab" data-cat="study">Study Abroad</button>
+      <button class="ftab" data-cat="fellowships">Fellowships</button>
+      <button class="ftab" data-cat="career">Career Tips</button>
+    </div>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <div class="con">
+    <div class="layout">
+      <main>
+
+        <div class="ad-unit"><!-- Google AdSense -->Advertisement</div>
+
+        <!-- SCHOLARSHIPS -->
+        <section class="cat-section visible" id="sec-scholarships" data-cat="scholarships">
+          <div class="sec-head">
+            <h2 class="sec-title">Scholarships</h2>
+            <a href="https://schollyjob.com/scholarships" class="sec-all">View all &rsaquo;</a>
+          </div>
+          <div class="cards">
+            <a href="https://schollyjob.com/fully-funded-scholarships-2026" class="card card-feat">
+              <img class="card-img" src="https://schollyjob.com/src/fully-funded-scholarships-2026.webp" alt="Fully Funded Scholarships 2026" loading="eager"/>
+              <div class="card-body">
+                <span class="ctag t-sch">Scholarships</span>
+                <div class="card-title">Fully Funded Scholarships 2026: Complete List Open for Applications Right Now</div>
+                <div class="card-desc">DAAD, Chevening, Fulbright, Erasmus Mundus and more — with verified stipend amounts, real deadlines, and honest advice on which programs fit which applicants.</div>
+                <div class="card-meta"><span>June 1, 2026</span><span>&middot;</span><span>12 min read</span></div>
+              </div>
+            </a>
+            <a href="https://schollyjob.com/top-scholarships-international-students-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/top-scholarships-international-students-2026.webp" alt="Top Scholarships for International Students 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-sch">Scholarships</span><div class="card-title">Top Scholarships for International Students in 2026 (No Application Fee)</div><div class="card-meta"><span>June 1, 2026</span><span>&middot;</span><span>11 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/how-to-write-winning-scholarship-essay" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/how-to-write-winning-scholarship-essay.webp" alt="How to Write a Winning Scholarship Essay" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-sch">Scholarships</span><div class="card-title">How to Write a Winning Scholarship Essay: 7 Templates That Actually Work</div><div class="card-meta"><span>May 20, 2026</span><span>&middot;</span><span>13 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/scholarships-for-african-students-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/scholarships-for-african-students-2026.webp" alt="Scholarships for African Students 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-sch">Scholarships</span><div class="card-title">Scholarships for African Students 2026: $10,000+ Opportunities You Can Apply Today</div><div class="card-meta"><span>June 2, 2026</span><span>&middot;</span><span>12 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/new-government-scholarships-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/new-government-scholarships-2026.webp" alt="New Government Scholarships 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-sch">Scholarships</span><div class="card-title">New Government Scholarships 2026 Just Announced — Deadline Is Closer Than You Think</div><div class="card-meta"><span>June 2, 2026</span><span>&middot;</span><span>11 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/masters-scholarships-without-ielts-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/masters-scholarships-without-ielts-2026.webp" alt="Masters Scholarships Without IELTS 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-sch">Scholarships</span><div class="card-title">Masters Scholarships Without IELTS in 2026: Apply With Just Your Degree Certificate</div><div class="card-meta"><span>May 28, 2026</span><span>&middot;</span><span>12 min</span></div></div>
+            </a>
+          </div>
+        </section>
+
+        <div class="ad-unit"><!-- Google AdSense -->Advertisement</div>
+
+        <!-- JOBS -->
+        <section class="cat-section visible" id="sec-jobs" data-cat="jobs">
+          <div class="sec-head">
+            <h2 class="sec-title">Jobs</h2>
+            <a href="https://schollyjob.com/jobs" class="sec-all">View all &rsaquo;</a>
+          </div>
+          <div class="cards">
+            <a href="https://schollyjob.com/remote-jobs-pay-5000-month-2026" class="card card-feat">
+              <img class="card-img" src="https://schollyjob.com/src/remote-jobs-pay-5000-month-2026.webp" alt="Remote Jobs Pay 5000 Month 2026" loading="lazy"/>
+              <div class="card-body">
+                <span class="ctag t-job">Jobs</span>
+                <div class="card-title">Remote Jobs That Pay $5,000/Month in 2026 — No Degree Required</div>
+                <div class="card-desc">Digital marketing, UX design, software development, AI prompt engineering — the real roles, real platforms, and honest timelines to get there.</div>
+                <div class="card-meta"><span>June 2, 2026</span><span>&middot;</span><span>13 min read</span></div>
+              </div>
+            </a>
+            <a href="https://schollyjob.com/un-jobs-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/un-jobs-2026.webp" alt="UN Jobs 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-job">Jobs</span><div class="card-title">UN Jobs 2026: How to Get a United Nations Job With Step-by-Step Application Guide</div><div class="card-meta"><span>June 1, 2026</span><span>&middot;</span><span>14 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/high-paying-jobs-canada-immigrants-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/high-paying-jobs-canada-immigrants-2026.webp" alt="High Paying Jobs Canada 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-job">Jobs</span><div class="card-title">High-Paying Jobs in Canada for Immigrants 2026: How to Apply Without a Job Offer</div><div class="card-meta"><span>June 2, 2026</span><span>&middot;</span><span>13 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/ngo-jobs-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/ngo-jobs-2026.webp" alt="NGO Jobs 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-job">Jobs</span><div class="card-title">NGO Jobs 2026 Hiring Now: International Organizations Accepting CVs This Month</div><div class="card-meta"><span>June 2, 2026</span><span>&middot;</span><span>13 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/paid-internships-abroad-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/paid-internships-abroad-2026.webp" alt="Paid Internships Abroad 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-job">Jobs</span><div class="card-title">Paid Internships Abroad 2026: Get Hired and Earn While Gaining International Experience</div><div class="card-meta"><span>June 1, 2026</span><span>&middot;</span><span>12 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/jobs-europe-visa-sponsorship-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/jobs-europe-visa-sponsorship-2026.webp" alt="Jobs Europe Visa Sponsorship 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-job">Jobs</span><div class="card-title">Top 15 In-Demand Jobs in Europe With Visa Sponsorship in 2026</div><div class="card-meta"><span>June 1, 2026</span><span>&middot;</span><span>13 min</span></div></div>
+            </a>
+          </div>
+        </section>
+
+        <!-- STUDY ABROAD -->
+        <section class="cat-section visible" id="sec-study" data-cat="study">
+          <div class="sec-head">
+            <h2 class="sec-title">Study Abroad</h2>
+            <a href="https://schollyjob.com/study-abroad" class="sec-all">View all &rsaquo;</a>
+          </div>
+          <div class="cards">
+            <a href="https://schollyjob.com/best-countries-study-abroad-free-2026" class="card card-feat">
+              <img class="card-img" src="https://schollyjob.com/src/best-countries-study-abroad-free-2026.webp" alt="Best Countries Study Abroad Free 2026" loading="lazy"/>
+              <div class="card-body">
+                <span class="ctag t-stu">Study Abroad</span>
+                <div class="card-title">Best Countries to Study Abroad for Free in 2026: Where Tuition Is Zero for International Students</div>
+                <div class="card-desc">Germany, Norway, France, Czech Republic, Argentina — real monthly cost breakdowns and everything the "free tuition" headline glosses over.</div>
+                <div class="card-meta"><span>June 2, 2026</span><span>&middot;</span><span>12 min read</span></div>
+              </div>
+            </a>
+            <a href="https://schollyjob.com/study-in-germany-free-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/study-in-germany-free-2026.webp" alt="Study in Germany Free 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-stu">Study Abroad</span><div class="card-title">How to Study in Germany for Free in 2026: Admission, Visa, and Living Cost Breakdown</div><div class="card-meta"><span>June 2, 2026</span><span>&middot;</span><span>14 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/study-in-canada-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/study-in-canada-2026.webp" alt="Study in Canada 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-stu">Study Abroad</span><div class="card-title">Study in Canada 2026: Cheapest Universities Accepting International Applications Now</div><div class="card-meta"><span>June 1, 2026</span><span>&middot;</span><span>12 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/uk-student-visa-requirements-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/uk-student-visa-requirements-2026.webp" alt="UK Student Visa Requirements 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-stu">Study Abroad</span><div class="card-title">Student Visa Requirements for the UK in 2026: New Rules Every Applicant Must Know</div><div class="card-meta"><span>June 1, 2026</span><span>&middot;</span><span>12 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/fully-funded-masters-usa-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/fully-funded-masters-usa-2026.webp" alt="Fully Funded Masters USA 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-stu">Study Abroad</span><div class="card-title">10 Fully Funded Masters Programs in the USA With Monthly Stipend for 2026</div><div class="card-meta"><span>May 30, 2026</span><span>&middot;</span><span>13 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/study-abroad-budget-europe-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/study-abroad-budget-europe-2026.webp" alt="Study Abroad Budget Europe 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-stu">Study Abroad</span><div class="card-title">Study Abroad on a Budget: 8 Affordable European Countries Under $800/Month in 2026</div><div class="card-meta"><span>May 30, 2026</span><span>&middot;</span><span>12 min</span></div></div>
+            </a>
+          </div>
+        </section>
+
+        <div class="ad-unit"><!-- Google AdSense -->Advertisement</div>
+
+        <!-- FELLOWSHIPS -->
+        <section class="cat-section visible" id="sec-fellowships" data-cat="fellowships">
+          <div class="sec-head">
+            <h2 class="sec-title">Fellowships</h2>
+            <a href="https://schollyjob.com/fellowships" class="sec-all">View all &rsaquo;</a>
+          </div>
+          <div class="cards">
+            <a href="https://schollyjob.com/fully-funded-fellowships-2026" class="card card-feat">
+              <img class="card-img" src="https://schollyjob.com/src/fully-funded-fellowships-2026.webp" alt="Fully Funded Fellowships 2026" loading="lazy"/>
+              <div class="card-body">
+                <span class="ctag t-fel">Fellowships</span>
+                <div class="card-title">Fully Funded Fellowships 2026 Open to Applicants From Developing Countries</div>
+                <div class="card-desc">Mandela Washington, Humphrey, Rotary Peace, Schwarzman, Atlas Corps and more — programs that fund people, not just degrees, with real selection criteria.</div>
+                <div class="card-meta"><span>June 2, 2026</span><span>&middot;</span><span>13 min read</span></div>
+              </div>
+            </a>
+            <a href="https://schollyjob.com/mandela-washington-fellowship-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/mandela-washington-fellowship-2026.webp" alt="Mandela Washington Fellowship 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-fel">Fellowships</span><div class="card-title">Mandela Washington Fellowship 2026: How to Apply, Eligibility, and What You Get</div><div class="card-meta"><span>June 1, 2026</span><span>&middot;</span><span>13 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/yali-fellowship-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/yali-fellowship-2026.webp" alt="YALI Fellowship 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-fel">Fellowships</span><div class="card-title">YALI Fellowship 2026: Complete Guide to the Application Process and Selection Criteria</div><div class="card-meta"><span>May 30, 2026</span><span>&middot;</span><span>12 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/research-fellowships-african-scholars-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/research-fellowships-african-scholars-2026.webp" alt="Research Fellowships African Scholars" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-fel">Fellowships</span><div class="card-title">Research Fellowships for Young African Scholars in 2026: Stipends Up to $30,000</div><div class="card-meta"><span>May 28, 2026</span><span>&middot;</span><span>13 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/how-to-get-fellowship-no-experience" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/how-to-get-fellowship-no-experience.webp" alt="How to Get a Fellowship No Experience" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-fel">Fellowships</span><div class="card-title">How to Get a Fellowship With No Experience: Insider Tips From Past Recipients</div><div class="card-meta"><span>May 28, 2026</span><span>&middot;</span><span>12 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/unesco-world-bank-fellowships-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/unesco-world-bank-fellowships-2026.webp" alt="UNESCO World Bank Fellowships 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-fel">Fellowships</span><div class="card-title">UNESCO and World Bank Fellowships 2026 Now Open: Deadlines, Eligibility, and How to Apply</div><div class="card-meta"><span>May 28, 2026</span><span>&middot;</span><span>12 min</span></div></div>
+            </a>
+          </div>
+        </section>
+
+        <!-- CAREER TIPS -->
+        <section class="cat-section visible" id="sec-career" data-cat="career">
+          <div class="sec-head">
+            <h2 class="sec-title">Career Tips</h2>
+            <a href="https://schollyjob.com/career-tips" class="sec-all">View all &rsaquo;</a>
+          </div>
+          <div class="cards">
+            <a href="https://schollyjob.com/zero-to-100k-remote-career" class="card card-feat">
+              <img class="card-img" src="https://schollyjob.com/src/zero-to-100k-remote-career.webp" alt="Zero to 100K Remote Career" loading="lazy"/>
+              <div class="card-body">
+                <span class="ctag t-car">Career Tips</span>
+                <div class="card-title">From Zero to $100K: How to Land a Six-Figure Remote Career Without a Master's Degree</div>
+                <div class="card-desc">Real paths, honest timelines, and the reputation compound that most career guides never mention. Written by someone who made the journey.</div>
+                <div class="card-meta"><span>May 28, 2026</span><span>&middot;</span><span>14 min read</span></div>
+              </div>
+            </a>
+            <a href="https://schollyjob.com/how-to-write-cv-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/how-to-write-cv-2026.webp" alt="How to Write CV 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-car">Career Tips</span><div class="card-title">How to Write a CV That Gets Shortlisted in 2026: Format, Examples, and Common Mistakes</div><div class="card-meta"><span>June 2, 2026</span><span>&middot;</span><span>13 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/linkedin-profile-tips-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/linkedin-profile-tips-2026.webp" alt="LinkedIn Profile Tips 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-car">Career Tips</span><div class="card-title">LinkedIn Profile Tips 2026: How to Get Recruiters to Find You First</div><div class="card-meta"><span>June 1, 2026</span><span>&middot;</span><span>12 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/job-interview-questions-answers-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/job-interview-questions-answers-2026.webp" alt="Job Interview Questions Answers 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-car">Career Tips</span><div class="card-title">Job Interview Questions and Answers in 2026: What Top Companies Are Actually Asking</div><div class="card-meta"><span>June 1, 2026</span><span>&middot;</span><span>13 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/high-paying-skills-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/high-paying-skills-2026.webp" alt="High Paying Skills 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-car">Career Tips</span><div class="card-title">High-Paying Skills to Learn in 2026: AI, Data Science, and Cybersecurity Careers Explained</div><div class="card-meta"><span>May 30, 2026</span><span>&middot;</span><span>13 min</span></div></div>
+            </a>
+            <a href="https://schollyjob.com/how-to-negotiate-salary-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/how-to-negotiate-salary-2026.webp" alt="How to Negotiate Salary 2026" loading="lazy"/>
+              <div class="card-body"><span class="ctag t-car">Career Tips</span><div class="card-title">How to Negotiate Your Salary in 2026: Scripts, Tactics, and What Not to Say</div><div class="card-meta"><span>May 28, 2026</span><span>&middot;</span><span>13 min</span></div></div>
+            </a>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="sidebar">
+        <div class="sb-box">
+          <div class="sb-head">Popular Posts</div>
+          <div class="sb-body">
+            <a href="https://schollyjob.com/fully-funded-scholarships-2026" class="sb-post">
+              <img class="sb-pimg" src="https://schollyjob.com/src/fully-funded-scholarships-2026.webp" alt="" loading="lazy"/>
+              <div><div class="sb-ptag">Scholarships</div><div class="sb-ptitle">Fully Funded Scholarships 2026: Complete List Open Now</div></div>
+            </a>
+            <a href="https://schollyjob.com/remote-jobs-pay-5000-month-2026" class="sb-post">
+              <img class="sb-pimg" src="https://schollyjob.com/src/remote-jobs-pay-5000-month-2026.webp" alt="" loading="lazy"/>
+              <div><div class="sb-ptag">Jobs</div><div class="sb-ptitle">Remote Jobs That Pay $5,000/Month in 2026</div></div>
+            </a>
+            <a href="https://schollyjob.com/study-in-germany-free-2026" class="sb-post">
+              <img class="sb-pimg" src="https://schollyjob.com/src/study-in-germany-free-2026.webp" alt="" loading="lazy"/>
+              <div><div class="sb-ptag">Study Abroad</div><div class="sb-ptitle">How to Study in Germany for Free in 2026</div></div>
+            </a>
+            <a href="https://schollyjob.com/mandela-washington-fellowship-2026" class="sb-post">
+              <img class="sb-pimg" src="https://schollyjob.com/src/mandela-washington-fellowship-2026.webp" alt="" loading="lazy"/>
+              <div><div class="sb-ptag">Fellowships</div><div class="sb-ptitle">Mandela Washington Fellowship 2026: How to Apply</div></div>
+            </a>
+            <a href="https://schollyjob.com/zero-to-100k-remote-career" class="sb-post">
+              <img class="sb-pimg" src="https://schollyjob.com/src/zero-to-100k-remote-career.webp" alt="" loading="lazy"/>
+              <div><div class="sb-ptag">Career Tips</div><div class="sb-ptitle">From Zero to $100K: Six-Figure Remote Career Guide</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="ad-unit"><!-- Google AdSense -->Advertisement</div>
+
+        <div class="sb-box">
+          <div class="sb-head">Categories</div>
+          <div class="sb-body">
+            <ul class="cat-list">
+              <li class="cat-item"><a href="https://schollyjob.com/scholarships">Scholarships <span class="cat-count">6</span></a></li>
+              <li class="cat-item"><a href="https://schollyjob.com/jobs">Jobs <span class="cat-count">6</span></a></li>
+              <li class="cat-item"><a href="https://schollyjob.com/study-abroad">Study Abroad <span class="cat-count">6</span></a></li>
+              <li class="cat-item"><a href="https://schollyjob.com/fellowships">Fellowships <span class="cat-count">6</span></a></li>
+              <li class="cat-item"><a href="https://schollyjob.com/career-tips">Career Tips <span class="cat-count">6</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sb-box">
+          <div class="sb-head">Get Opportunities Weekly</div>
+          <div class="sb-body">
+            <div class="nl-form">
+              <p>New scholarships, remote jobs, and fellowships in your inbox every week. No spam, unsubscribe anytime.</p>
+              <input type="email" class="nl-inp" placeholder="Your email address" aria-label="Email address"/>
+              <button class="nl-btn">Subscribe Free</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-box">
+          <div class="sb-head">Popular Tags</div>
+          <div class="sb-body">
+            <div class="tags-cloud">
+              <a href="https://schollyjob.com/fully-funded-scholarships-2026" class="tag-pill">Chevening</a>
+              <a href="https://schollyjob.com/fully-funded-scholarships-2026" class="tag-pill">DAAD</a>
+              <a href="https://schollyjob.com/fully-funded-scholarships-2026" class="tag-pill">Fulbright</a>
+              <a href="https://schollyjob.com/masters-scholarships-without-ielts-2026" class="tag-pill">No IELTS</a>
+              <a href="https://schollyjob.com/remote-jobs-pay-5000-month-2026" class="tag-pill">Remote Jobs</a>
+              <a href="https://schollyjob.com/un-jobs-2026" class="tag-pill">UN Jobs</a>
+              <a href="https://schollyjob.com/study-in-germany-free-2026" class="tag-pill">Germany Free</a>
+              <a href="https://schollyjob.com/mandela-washington-fellowship-2026" class="tag-pill">YALI</a>
+              <a href="https://schollyjob.com/high-paying-skills-2026" class="tag-pill">AI Skills</a>
+              <a href="https://schollyjob.com/how-to-write-cv-2026" class="tag-pill">CV Writing</a>
+              <a href="https://schollyjob.com/study-abroad-budget-europe-2026" class="tag-pill">Budget Europe</a>
+              <a href="https://schollyjob.com/scholarships-for-african-students-2026" class="tag-pill">Africa</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="con">
+    <div class="fg">
+      <div class="fa">
+        <a href="https://schollyjob.com/" class="logo"><div class="logo-i">S</div>Scholly<span>Job</span></a>
+        <p>SchollyJob covers fully funded scholarships, high-paying remote jobs, study abroad guides, fellowships, and career advice for students and professionals worldwide.</p>
+      </div>
+      <div class="fc">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="https://schollyjob.com/scholarships">Scholarships</a></li>
+          <li><a href="https://schollyjob.com/jobs">Jobs</a></li>
+          <li><a href="https://schollyjob.com/study-abroad">Study Abroad</a></li>
+          <li><a href="https://schollyjob.com/fellowships">Fellowships</a></li>
+          <li><a href="https://schollyjob.com/career-tips">Career Tips</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="https://schollyjob.com/">Home</a></li>
+          <li><a href="https://schollyjob.com/about">About Us</a></li>
+          <li><a href="https://schollyjob.com/contact">Contact</a></li>
+          <li><a href="https://schollyjob.com/privacy-policy">Privacy Policy</a></li>
+          <li><a href="https://schollyjob.com/disclaimer">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>&copy; 2026 SchollyJob. All rights reserved. Content is for informational purposes only.</p>
+      <div style="display:flex;gap:16px;">
+        <a href="https://schollyjob.com/privacy-policy">Privacy</a>
+        <a href="https://schollyjob.com/disclaimer">Disclaimer</a>
+        <a href="https://schollyjob.com/contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="sbt" id="st" aria-label="Back to top">&#8593;</button>
+
+<script>
+const hb=document.getElementById('hb'),mn=document.getElementById('mobnav');
+hb.addEventListener('click',()=>{const o=hb.classList.toggle('open');mn.classList.toggle('open',o);hb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});
+function cx(){hb.classList.remove('open');mn.classList.remove('open');hb.setAttribute('aria-expanded','false');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')cx()});
+// Filter tabs
+const tabs=document.querySelectorAll('.ftab');
+const secs=document.querySelectorAll('.cat-section');
+tabs.forEach(t=>{
+  t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    const cat=t.dataset.cat;
+    secs.forEach(s=>{
+      s.classList.toggle('visible',cat==='all'||s.dataset.cat===cat);
+    });
+  });
+});
+// Scroll top
+const st=document.getElementById('st');
+window.addEventListener('scroll',()=>st.classList.toggle('v',window.scrollY>400),{passive:true});
+st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
