@@ -9,6 +9,17 @@
 <meta property="og:site_name" content="SchollyJob"/>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2787088404309540"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z5F46RBX3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2Z5F46RBX3');
+</script>
 <link rel="canonical" href="https://schollyjob.com/contact"/>
 <meta property="og:type" content="WebPage"/><meta property="og:title" content="Contact Us | SchollyJob"/>
 <meta property="og:url" content="https://schollyjob.com/contact"/>
@@ -110,33 +121,118 @@
 
   <h2>Send Us a Message</h2>
 
+  <!-- Contact Form -->
+<style>
+
+
+.contact-box{
+    width:100%;
+    max-width:500px;
+    background:#fff;
+    padding:35px;
+    border-radius:10px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.contact-box h2{
+    font-size:28px;
+    color:var(--ink);
+    margin-bottom:8px;
+}
+
+.contact-box p{
+    color:#64748b;
+    margin-bottom:28px;
+    font-size:15px;
+}
+
+/* Your Styling */
+.form-group{
+    margin-bottom:22px;
+}
+
+.form-group label{
+    display:block;
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:12px 14px;
+    border:1.5px solid var(--br);
+    border-radius:6px;
+    font-family:var(--fb);
+    font-size:15px;
+    color:var(--ink);
+    background:#fff;
+    transition:.2s;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:var(--acc);
+}
+
+.form-group textarea{
+    height:140px;
+    resize:vertical;
+}
+
+.submit-btn{
+    width:100%;
+    border:none;
+    background:var(--acc);
+    color:#fff;
+    padding:14px;
+    border-radius:6px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.submit-btn:hover{
+    opacity:.92;
+}
+</style>
+
+
+
   <form id="contact-form" onsubmit="handleSubmit(event)">
     <div class="form-group">
-      <label for="name">Your Name *</label>
-      <input type="text" id="name" name="name" placeholder="Jane Doe" required/>
-    </div>
-    <div class="form-group">
-      <label for="email">Email Address *</label>
-      <input type="email" id="email" name="email" placeholder="jane@example.com" required/>
-    </div>
-    <div class="form-group">
-      <label for="subject">Subject *</label>
-      <select id="subject" name="subject" required>
-        <option value="" disabled selected>Select a topic</option>
-        <option value="error">Report an Error or Outdated Information</option>
-        <option value="contribute">Content Contribution Enquiry</option>
-        <option value="advertising">Advertising Enquiry</option>
-        <option value="general">General Question</option>
-        <option value="other">Other</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="message">Message *</label>
-      <textarea id="message" name="message" placeholder="Please be as specific as possible. If reporting an error, include the article URL and the specific information that needs correcting." required></textarea>
-    </div>
-    <button type="submit" class="btn-primary">Send Message &rarr;</button>
-    <div class="success-msg" id="success-msg">
-      &#10003; Thank you for your message. We typically respond within 2 business days.
+    
+    <form action="https://formspree.io/f/mpqeqgnr" method="POST">
+
+        <div class="form-group">
+            <label>Your Email</label>
+            <input 
+                type="email" 
+                name="email" 
+                placeholder="Enter your email"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Your Message</label>
+            <textarea 
+                name="message" 
+                placeholder="Write your message..."
+                required
+            ></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Send Message
+        </button>
+
+    </form>
     </div>
   </form>
 
