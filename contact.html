@@ -121,120 +121,34 @@
 
   <h2>Send Us a Message</h2>
 
-  <!-- Contact Form -->
-<style>
-
-
-.contact-box{
-    width:100%;
-    max-width:500px;
-    background:#fff;
-    padding:35px;
-    border-radius:10px;
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
-}
-
-.contact-box h2{
-    font-size:28px;
-    color:var(--ink);
-    margin-bottom:8px;
-}
-
-.contact-box p{
-    color:#64748b;
-    margin-bottom:28px;
-    font-size:15px;
-}
-
-/* Your Styling */
-.form-group{
-    margin-bottom:22px;
-}
-
-.form-group label{
-    display:block;
-    font-size:14px;
-    font-weight:600;
-    color:var(--ink);
-    margin-bottom:6px;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select{
-    width:100%;
-    padding:12px 14px;
-    border:1.5px solid var(--br);
-    border-radius:6px;
-    font-family:var(--fb);
-    font-size:15px;
-    color:var(--ink);
-    background:#fff;
-    transition:.2s;
-    outline:none;
-}
-
-.form-group input:focus,
-.form-group textarea:focus{
-    border-color:var(--acc);
-}
-
-.form-group textarea{
-    height:140px;
-    resize:vertical;
-}
-
-.submit-btn{
-    width:100%;
-    border:none;
-    background:var(--acc);
-    color:#fff;
-    padding:14px;
-    border-radius:6px;
-    font-size:15px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.submit-btn:hover{
-    opacity:.92;
-}
+  <style>
+.form-wrap { max-width: 480px; margin: 2rem auto; background: #fff; border: 0.5px solid rgba(0,0,0,0.12); border-radius: 12px; padding: 2rem; }
+.form-title { font-size: 20px; font-weight: 500; margin: 0 0 0.25rem; }
+.form-sub { font-size: 14px; color: #666; margin: 0 0 1.75rem; }
+.field { margin-bottom: 1.25rem; }
+.field label { display: block; font-size: 13px; font-weight: 500; color: #555; margin-bottom: 6px; }
+.field input, .field textarea { width: 100%; box-sizing: border-box; padding: 10px 14px; font-size: 15px; background: #f5f5f3; border: 0.5px solid rgba(0,0,0,0.2); border-radius: 8px; outline: none; font-family: inherit; resize: none; transition: border-color 0.15s, box-shadow 0.15s; }
+.field input:focus, .field textarea:focus { border-color: #378ADD; box-shadow: 0 0 0 3px rgba(55,138,221,0.12); }
+.field textarea { min-height: 120px; }
+.submit-btn { width: 100%; padding: 11px; font-size: 15px; font-weight: 500; color: #fff; background: #c8451a; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: background 0.15s; }
+.submit-btn:hover { background: #0C447C; }
 </style>
 
-
-
-  <form id="contact-form" onsubmit="handleSubmit(event)">
-    <div class="form-group">
-    
-    <form action="https://formspree.io/f/mpqeqgnr" method="POST">
-
-        <div class="form-group">
-            <label>Your Email</label>
-            <input 
-                type="email" 
-                name="email" 
-                placeholder="Enter your email"
-                required
-            >
-        </div>
-
-        <div class="form-group">
-            <label>Your Message</label>
-            <textarea 
-                name="message" 
-                placeholder="Write your message..."
-                required
-            ></textarea>
-        </div>
-
-        <button type="submit" class="submit-btn">
-            Send Message
-        </button>
-
-    </form>
+<div class="form-wrap">
+  <p class="form-title">Get in touch</p>
+  <p class="form-sub">Fill out the form below and I'll get back to you shortly.</p>
+  <form action="https://formspree.io/f/mpqeqgnr" method="POST">
+    <div class="field">
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com">
     </div>
+    <div class="field">
+      <label for="message">Your message</label>
+      <textarea id="message" name="message" placeholder="What's on your mind?"></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Send message</button>
   </form>
+</div>
 
   <h2>Response Times</h2>
   <p>We aim to respond to all messages within two business days. Error reports and factual corrections receive priority review and are typically addressed within 24 hours of verification.</p>
