@@ -183,6 +183,17 @@ footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
   .fg{grid-template-columns:1fr;gap:24px}
   .fbot{flex-direction:column;gap:8px;text-align:center}
 }
+
+/* COOKIE CONSENT */
+#ck-bar{position:fixed;bottom:0;left:0;right:0;background:#1a1612;color:#d4cfc8;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:9999;flex-wrap:wrap;font-size:14px;box-shadow:0 -4px 16px rgba(0,0,0,.3);transform:translateY(100%);transition:transform .4s ease}
+#ck-bar.show{transform:translateY(0)}
+#ck-bar p{margin:0;line-height:1.5;flex:1;min-width:200px}
+#ck-bar a{color:#d4a017;text-decoration:underline}
+#ck-bar .ck-btns{display:flex;gap:10px;flex-shrink:0}
+#ck-bar .ck-accept{background:#c8451a;color:#fff;border:none;padding:9px 22px;border-radius:4px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap}
+#ck-bar .ck-accept:hover{background:#a33614}
+#ck-bar .ck-decline{background:transparent;color:#d4cfc8;border:1px solid rgba(255,255,255,.25);padding:9px 18px;border-radius:4px;font-size:14px;cursor:pointer;white-space:nowrap}
+#ck-bar .ck-decline:hover{border-color:#fff}
 </style>
 </head>
 <body>
@@ -244,8 +255,57 @@ footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
     <div class="layout">
       <main>
 
-        
+        <!-- LATEST POSTS -->
+        <section class="cat-section visible" id="sec-latest" data-cat="all">
+          <div class="sec-head">
+            <h2 class="sec-title">Latest Posts</h2>
+          </div>
+          <div class="cards">
+            <a href="https://schollyjob.com/scholarships-that-cover-living-expenses-2026" class="card card-feat">
+              <img class="card-img" src="https://schollyjob.com/src/scholarships-that-cover-living-expenses-2026.webp" alt="Scholarships That Cover Living Expenses in 2026: Programs That Pay You to Study, Not Just Waive Tuition" loading="eager"/>
+              <div class="card-body">
+                <span class="ctag t-sch">Scholarships</span>
+                <div class="card-title">Scholarships That Cover Living Expenses in 2026: Programs That Pay You to Study, Not Just Waive Tuition</div>
+                <div class="card-desc">Chevening, DAAD, Erasmus Mundus, GKS and more — real monthly stipend amounts and a framework for calculating actual package value before you apply.</div>
+                <div class="card-meta"><span>New</span><span>14 min read</span><span>June 25, 2026</span></div>
+              </div>
+            </a>
+            <a href="https://schollyjob.com/gates-cambridge-vs-rhodes-vs-schwarzman" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/gates-cambridge-vs-rhodes-vs-schwarzman.webp" alt="Gates Cambridge vs Rhodes vs Schwarzman: Which Flagship Fellowship Actually Fits Your Profile" loading="lazy"/>
+              <div class="card-body">
+                <span class="ctag t-fel">Fellowships</span>
+                <div class="card-title">Gates Cambridge vs Rhodes vs Schwarzman: Which Flagship Fellowship Actually Fits Your Profile</div>
+                <div class="card-meta"><span>New</span><span>13 min read</span><span>June 25, 2026</span></div>
+              </div>
+            </a>
+            <a href="https://schollyjob.com/study-in-australia-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/study-in-australia-2026.webp" alt="How to Study in Australia in 2026: Universities, Costs, Visa Requirements, and Scholarship Options" loading="lazy"/>
+              <div class="card-body">
+                <span class="ctag t-stu">Study Abroad</span>
+                <div class="card-title">How to Study in Australia in 2026: Universities, Costs, Visa Requirements, and Scholarship Options</div>
+                <div class="card-meta"><span>New</span><span>15 min read</span><span>June 25, 2026</span></div>
+              </div>
+            </a>
+            <a href="https://schollyjob.com/world-bank-jobs-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/world-bank-jobs-2026.webp" alt="World Bank Jobs 2026: How to Get Hired, What Positions Pay, and What the Application Process Actually Looks Like" loading="lazy"/>
+              <div class="card-body">
+                <span class="ctag t-job">Jobs</span>
+                <div class="card-title">World Bank Jobs 2026: How to Get Hired, What Positions Pay, and What the Application Process Actually Looks Like</div>
+                <div class="card-meta"><span>New</span><span>14 min read</span><span>June 25, 2026</span></div>
+              </div>
+            </a>
+            <a href="https://schollyjob.com/how-to-write-cover-letter-2026" class="card">
+              <img class="card-img" src="https://schollyjob.com/src/how-to-write-cover-letter-2026.webp" alt="How to Write a Cover Letter in 2026: What Hiring Managers Actually Read and What Gets Ignored" loading="lazy"/>
+              <div class="card-body">
+                <span class="ctag t-car">Career Tips</span>
+                <div class="card-title">How to Write a Cover Letter in 2026: What Hiring Managers Actually Read and What Gets Ignored</div>
+                <div class="card-meta"><span>New</span><span>12 min read</span><span>June 25, 2026</span></div>
+              </div>
+            </a>
+          </div>
+        </section>
 
+        
         <!-- SCHOLARSHIPS -->
         <section class="cat-section visible" id="sec-scholarships" data-cat="scholarships">
           <div class="sec-head">
@@ -254,14 +314,15 @@ footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
           </div>
           <div class="cards">
             <a href="https://schollyjob.com/fully-funded-scholarships-2026" class="card card-feat">
-              <img class="card-img" src="https://schollyjob.com/src/fully-funded-scholarships-2026.webp" alt="Fully Funded Scholarships 2026" loading="eager"/>
+              <img class="card-img" src="https://schollyjob.com/src/fully-funded-scholarships-2026.webp" alt="Fully Funded Scholarships 2026: Complete List Open for Applications Right Now" loading="eager"/>
               <div class="card-body">
                 <span class="ctag t-sch">Scholarships</span>
                 <div class="card-title">Fully Funded Scholarships 2026: Complete List Open for Applications Right Now</div>
                 <div class="card-desc">DAAD, Chevening, Fulbright, Erasmus Mundus and more — with verified stipend amounts, real deadlines, and honest advice on which programs fit which applicants.</div>
-                <div class="card-meta"><span>&middot;</span><span>12 min read</span></div>
+                <div class="card-meta"><span>&middot;</span><span>18 min read</span></div>
               </div>
             </a>
+            
             <a href="https://schollyjob.com/top-scholarships-international-students-2026" class="card">
               <img class="card-img" src="https://schollyjob.com/src/top-scholarships-international-students-2026.webp" alt="Top Scholarships for International Students 2026" loading="lazy"/>
               <div class="card-body"><span class="ctag t-sch">Scholarships</span><div class="card-title">Top Scholarships for International Students in 2026 (No Application Fee)</div><div class="card-meta"><span>&middot;</span><span>11 min</span></div></div>
@@ -291,7 +352,7 @@ footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
           </div>
           <div class="cards">
             <a href="https://schollyjob.com/remote-jobs-pay-5000-month-2026" class="card card-feat">
-              <img class="card-img" src="https://schollyjob.com/src/remote-jobs-pay-5000-month-2026.webp" alt="Remote Jobs Pay 5000 Month 2026" loading="lazy"/>
+              <img class="card-img" src="https://schollyjob.com/src/remote-jobs-pay-5000-month-2026.webp" alt="Remote Jobs That Pay $5,000/Month in 2026 — No Degree Required" loading="eager"/>
               <div class="card-body">
                 <span class="ctag t-job">Jobs</span>
                 <div class="card-title">Remote Jobs That Pay $5,000/Month in 2026 — No Degree Required</div>
@@ -299,6 +360,7 @@ footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
                 <div class="card-meta"><span>&middot;</span><span>13 min read</span></div>
               </div>
             </a>
+            
             <a href="https://schollyjob.com/un-jobs-2026" class="card">
               <img class="card-img" src="https://schollyjob.com/src/un-jobs-2026.webp" alt="UN Jobs 2026" loading="lazy"/>
               <div class="card-body"><span class="ctag t-job">Jobs</span><div class="card-title">UN Jobs 2026: How to Get a United Nations Job With Step-by-Step Application Guide</div><div class="card-meta"><span>&middot;</span><span>14 min</span></div></div>
@@ -326,7 +388,7 @@ footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
           </div>
           <div class="cards">
             <a href="https://schollyjob.com/best-countries-study-abroad-free-2026" class="card card-feat">
-              <img class="card-img" src="https://schollyjob.com/src/best-countries-study-abroad-free-2026.webp" alt="Best Countries Study Abroad Free 2026" loading="lazy"/>
+              <img class="card-img" src="https://schollyjob.com/src/best-countries-study-abroad-free-2026.webp" alt="Best Countries to Study Abroad for Free in 2026: Where Tuition Is Zero for International Students" loading="eager"/>
               <div class="card-body">
                 <span class="ctag t-stu">Study Abroad</span>
                 <div class="card-title">Best Countries to Study Abroad for Free in 2026: Where Tuition Is Zero for International Students</div>
@@ -334,6 +396,7 @@ footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
                 <div class="card-meta"><span>&middot;</span><span>12 min read</span></div>
               </div>
             </a>
+            
             <a href="https://schollyjob.com/study-in-germany-free-2026" class="card">
               <img class="card-img" src="https://schollyjob.com/src/study-in-germany-free-2026.webp" alt="Study in Germany Free 2026" loading="lazy"/>
               <div class="card-body"><span class="ctag t-stu">Study Abroad</span><div class="card-title">How to Study in Germany for Free in 2026: Admission, Visa, and Living Cost Breakdown</div><div class="card-meta"><span>&middot;</span><span>14 min</span></div></div>
@@ -363,7 +426,7 @@ footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
           </div>
           <div class="cards">
             <a href="https://schollyjob.com/fully-funded-fellowships-2026" class="card card-feat">
-              <img class="card-img" src="https://schollyjob.com/src/fully-funded-fellowships-2026.webp" alt="Fully Funded Fellowships 2026" loading="lazy"/>
+              <img class="card-img" src="https://schollyjob.com/src/fully-funded-fellowships-2026.webp" alt="Fully Funded Fellowships 2026 Open to Applicants From Developing Countries" loading="eager"/>
               <div class="card-body">
                 <span class="ctag t-fel">Fellowships</span>
                 <div class="card-title">Fully Funded Fellowships 2026 Open to Applicants From Developing Countries</div>
@@ -371,6 +434,7 @@ footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
                 <div class="card-meta"><span>&middot;</span><span>13 min read</span></div>
               </div>
             </a>
+            
             <a href="https://schollyjob.com/mandela-washington-fellowship-2026" class="card">
               <img class="card-img" src="https://schollyjob.com/src/mandela-washington-fellowship-2026.webp" alt="Mandela Washington Fellowship 2026" loading="lazy"/>
               <div class="card-body"><span class="ctag t-fel">Fellowships</span><div class="card-title">Mandela Washington Fellowship 2026: How to Apply, Eligibility, and What You Get</div><div class="card-meta"><span>&middot;</span><span>13 min</span></div></div>
@@ -398,14 +462,15 @@ footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
           </div>
           <div class="cards">
             <a href="https://schollyjob.com/zero-to-100k-remote-career" class="card card-feat">
-              <img class="card-img" src="https://schollyjob.com/src/zero-to-100k-remote-career.webp" alt="Zero to 100K Remote Career" loading="lazy"/>
+              <img class="card-img" src="https://schollyjob.com/src/zero-to-100k-remote-career.webp" alt="From Zero to $100K: How to Land a Six-Figure Remote Career Without a Master's Degree" loading="eager"/>
               <div class="card-body">
                 <span class="ctag t-car">Career Tips</span>
                 <div class="card-title">From Zero to $100K: How to Land a Six-Figure Remote Career Without a Master's Degree</div>
-                <div class="card-desc">Real paths, honest timelines, and the reputation compound that most career guides never mention. Written by someone who made the journey.</div>
+                <div class="card-desc">Real paths, honest timelines, and the reputation compound that most career guides never mention.</div>
                 <div class="card-meta"><span>&middot;</span><span>14 min read</span></div>
               </div>
             </a>
+            
             <a href="https://schollyjob.com/how-to-write-cv-2026" class="card">
               <img class="card-img" src="https://schollyjob.com/src/how-to-write-cv-2026.webp" alt="How to Write CV 2026" loading="lazy"/>
               <div class="card-body"><span class="ctag t-car">Career Tips</span><div class="card-title">How to Write a CV That Gets Shortlisted in 2026: Format, Examples, and Common Mistakes</div><div class="card-meta"><span>&middot;</span><span>13 min</span></div></div>
@@ -456,11 +521,11 @@ footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
           <div class="sb-head">Categories</div>
           <div class="sb-body">
             <ul class="cat-list">
-              <li class="cat-item"><a href="https://schollyjob.com/scholarships">Scholarships <span class="cat-count">6</span></a></li>
-              <li class="cat-item"><a href="https://schollyjob.com/jobs">Jobs <span class="cat-count">6</span></a></li>
-              <li class="cat-item"><a href="https://schollyjob.com/study-abroad">Study Abroad <span class="cat-count">6</span></a></li>
-              <li class="cat-item"><a href="https://schollyjob.com/fellowships">Fellowships <span class="cat-count">6</span></a></li>
-              <li class="cat-item"><a href="https://schollyjob.com/career-tips">Career Tips <span class="cat-count">6</span></a></li>
+              <li class="cat-item"><a href="https://schollyjob.com/scholarships">Scholarships <span class="cat-count">7</span></a></li>
+              <li class="cat-item"><a href="https://schollyjob.com/jobs">Jobs <span class="cat-count">7</span></a></li>
+              <li class="cat-item"><a href="https://schollyjob.com/study-abroad">Study Abroad <span class="cat-count">7</span></a></li>
+              <li class="cat-item"><a href="https://schollyjob.com/fellowships">Fellowships <span class="cat-count">7</span></a></li>
+              <li class="cat-item"><a href="https://schollyjob.com/career-tips">Career Tips <span class="cat-count">7</span></a></li>
             </ul>
           </div>
         </div>
@@ -522,8 +587,9 @@ footer{background:var(--ink);color:#8a8580;padding:48px 0 0}
         <ul>
           <li><a href="https://schollyjob.com/">Home</a></li>
           <li><a href="https://schollyjob.com/about">About Us</a></li>
+<li><a href="https://schollyjob.com/editorial">Editorial Team</a></li>
           <li><a href="https://schollyjob.com/contact">Contact</a></li>
-          <li><a href="https://schollyjob.com/privacy-policy">Privacy Policy</a></li>
+          <li><a href="https://schollyjob.com/privacy-policy">Privacy Policy</a></li><li><a href="https://schollyjob.com/terms-of-service">Terms of Service</a></li>
           <li><a href="https://schollyjob.com/disclaimer">Disclaimer</a></li>
         </ul>
       </div>
@@ -564,5 +630,32 @@ const st=document.getElementById('st');
 window.addEventListener('scroll',()=>st.classList.toggle('v',window.scrollY>400),{passive:true});
 st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
+
+<!-- Cookie Consent Banner -->
+<div id="ck-bar" role="dialog" aria-label="Cookie consent">
+  <p>We use cookies to improve your experience and show relevant ads. See our <a href="https://schollyjob.com/privacy-policy">Privacy Policy</a> for details.</p>
+  <div class="ck-btns">
+    <button class="ck-decline" id="ck-d">Decline</button>
+    <button class="ck-accept" id="ck-a">Accept Cookies</button>
+  </div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('ck-bar');
+  if(!bar) return;
+  if(!localStorage.getItem('ck_consent')){
+    setTimeout(function(){bar.classList.add('show');},800);
+  }
+  document.getElementById('ck-a').addEventListener('click',function(){
+    localStorage.setItem('ck_consent','accepted');
+    bar.classList.remove('show');
+  });
+  document.getElementById('ck-d').addEventListener('click',function(){
+    localStorage.setItem('ck_consent','declined');
+    bar.classList.remove('show');
+  });
+})();
+</script>
+
 </body>
 </html>

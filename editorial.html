@@ -65,6 +65,17 @@
 .alumni-band .btn:hover{background:#a8361a;text-decoration:none}
 @media(max-width:768px){.team-grid{grid-template-columns:1fr 1fr}.principles-grid{grid-template-columns:1fr}}
 @media(max-width:480px){.team-grid{grid-template-columns:1fr}}
+
+/* COOKIE CONSENT */
+#ck-bar{position:fixed;bottom:0;left:0;right:0;background:#1a1612;color:#d4cfc8;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:9999;flex-wrap:wrap;font-size:14px;box-shadow:0 -4px 16px rgba(0,0,0,.3);transform:translateY(100%);transition:transform .4s ease}
+#ck-bar.show{transform:translateY(0)}
+#ck-bar p{margin:0;line-height:1.5;flex:1;min-width:200px}
+#ck-bar a{color:#d4a017;text-decoration:underline}
+#ck-bar .ck-btns{display:flex;gap:10px;flex-shrink:0}
+#ck-bar .ck-accept{background:#c8451a;color:#fff;border:none;padding:9px 22px;border-radius:4px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap}
+#ck-bar .ck-accept:hover{background:#a33614}
+#ck-bar .ck-decline{background:transparent;color:#d4cfc8;border:1px solid rgba(255,255,255,.25);padding:9px 18px;border-radius:4px;font-size:14px;cursor:pointer;white-space:nowrap}
+#ck-bar .ck-decline:hover{border-color:#fff}
 </style>
 </head>
 <body>
@@ -79,80 +90,36 @@
 <div class="pg-hero">
   <div class="con">
     <h1>SchollyJob Editorial Team</h1>
-    <p>Six editors. Six continents of experience. One commitment: accurate, honest guidance you can actually use.</p>
+    <p>Two editors. One commitment: accurate, honest guidance you can actually use.</p>
   </div>
 </div>
 
 <div class="pg-wrap">
 
-  <p>Every article on SchollyJob is researched, written, and reviewed by editors with direct, lived experience in the programs they cover. We do not outsource to generalist content farms, we do not publish AI-generated summaries of official websites, and we do not accept payment to feature programs. What you read here reflects genuine expertise from people who have navigated the same systems you are navigating now.</p>
+  <p>Every article on SchollyJob is researched and written by editors who genuinely care about the topics they cover — not generalist writers producing content at volume. We do not accept payment to feature programs, and we do not publish content we cannot stand behind. What you read here is written by people who have spent real time thinking carefully about the subjects they write about.</p>
 
   <h2>Our Editors</h2>
 
-  <div class="team-grid">
+  <div class="team-grid" style="grid-template-columns:repeat(2,1fr);max-width:560px">
     <div class="team-card">
       <div class="avatar" style="background:linear-gradient(135deg,#1a5c8a 0%,#0d3a5c 100%)">A</div>
       <div class="tcb">
-        <h3>Amara Diallo</h3>
-        <div class="role">Editor-in-Chief &mdash; Scholarships</div>
-        <p class="bio">Former Chevening Scholar (2019, London School of Economics). Eight years researching and writing about international scholarships and fellowship programs across West Africa and Europe. Previously a programs officer at a Dakar-based education NGO.</p>
+        <h3><a href="https://schollyjob.com/author/amara-diallo" style="color:inherit;text-decoration:none">Amara Diallo</a></h3>
+        <div class="role">Editor-in-Chief</div>
+        <p class="bio">Amara has spent most of her adult life obsessing over one question: why do some people find their way to life-changing opportunities while equally deserving people never hear about them? That question is what drives everything she writes at SchollyJob. When she is not researching scholarship programs or pulling apart application guidelines, she is usually hiking somewhere with bad phone signal, reading West African fiction, or losing at chess to people who are far too relaxed about it.</p>
         <div class="expertise">
-          <span class="tag">Chevening</span><span class="tag">DAAD</span><span class="tag">Mastercard Foundation</span><span class="tag">Application Strategy</span>
+          <span class="tag">Chevening</span><span class="tag">DAAD</span><span class="tag">Erasmus Mundus</span><span class="tag">Study Abroad</span><span class="tag">Fellowships</span>
         </div>
       </div>
     </div>
     <div class="team-card">
       <div class="avatar" style="background:linear-gradient(135deg,#1a6b3a 0%,#0d3a1e 100%)">K</div>
       <div class="tcb">
-        <h3>Kofi Mensah</h3>
+        <h3><a href="https://schollyjob.com/author/kofi-mensah" style="color:inherit;text-decoration:none">Kofi Mensah</a></h3>
         <div class="role">Jobs &amp; Careers Editor</div>
-        <p class="bio">Six years in the UN system at UNDP Ghana and WHO Geneva. Expert in the full UN hiring lifecycle from Inspira applications through competency-based interviews to career progression within the multilateral system.</p>
+        <p class="bio">Kofi is the kind of person who reads job descriptions the way other people read movie reviews — looking for what they are really saying between the lines. He joined SchollyJob because he wanted to write the career guides he wishes had existed when he was starting out: honest about how hard things actually are, specific about what actually works. Outside of work he follows football with an unhealthy level of intensity, cooks elaborate weekend meals that rarely go according to plan, and is slowly working his way through every jazz album ever recorded.</p>
         <div class="expertise">
-          <span class="tag">UN System</span><span class="tag">NGO Careers</span><span class="tag">Salary Negotiation</span><span class="tag">Development Sector</span>
-        </div>
-      </div>
-    </div>
-    <div class="team-card">
-      <div class="avatar" style="background:linear-gradient(135deg,#6b2f8a 0%,#3d1a52 100%)">P</div>
-      <div class="tcb">
-        <h3>Priya Nair</h3>
-        <div class="role">Study Abroad Editor</div>
-        <p class="bio">DAAD Scholar (Heidelberg University, 2018) and Erasmus Mundus alumna. Has navigated student visa processes in Germany, France, and the Netherlands. Covers practical cost-of-living, visa walkthroughs, and university application guides.</p>
-        <div class="expertise">
-          <span class="tag">Germany</span><span class="tag">Student Visas</span><span class="tag">Erasmus Mundus</span><span class="tag">Budget Planning</span>
-        </div>
-      </div>
-    </div>
-    <div class="team-card">
-      <div class="avatar" style="background:linear-gradient(135deg,#8a6b1a 0%,#52400d 100%)">J</div>
-      <div class="tcb">
-        <h3>James Okonkwo</h3>
-        <div class="role">Fellowships Editor</div>
-        <p class="bio">Mandela Washington Fellow (2017) and Gates Cambridge Scholar (MPhil Development Studies, 2020). Specializes in competitive fellowship applications, research funding for African scholars, and the YALI and Fulbright ecosystems.</p>
-        <div class="expertise">
-          <span class="tag">Gates Cambridge</span><span class="tag">Fulbright</span><span class="tag">YALI</span><span class="tag">Research Funding</span>
-        </div>
-      </div>
-    </div>
-    <div class="team-card">
-      <div class="avatar" style="background:linear-gradient(135deg,#c8451a 0%,#7a2910 100%)">L</div>
-      <div class="tcb">
-        <h3>Lena Hoffmann</h3>
-        <div class="role">Research &amp; Accuracy Editor</div>
-        <p class="bio">Based in Berlin. Former academic researcher in education policy. Responsible for verifying program details, monitoring deadline changes, and flagging updates across all scholarship and visa guides. Every factual claim on SchollyJob passes through her review.</p>
-        <div class="expertise">
-          <span class="tag">Fact-Checking</span><span class="tag">Program Verification</span><span class="tag">EU Scholarships</span><span class="tag">Visa Policy</span>
-        </div>
-      </div>
-    </div>
-    <div class="team-card">
-      <div class="avatar" style="background:linear-gradient(135deg,#1a5c8a 0%,#6b2f8a 100%)">M</div>
-      <div class="tcb">
-        <h3>Miguel Santos</h3>
-        <div class="role">Remote Work &amp; Skills Editor</div>
-        <p class="bio">Full-stack developer and remote work consultant based in Lisbon. Has hired and worked with remote teams across 15 countries. Leads coverage of remote jobs, in-demand skills, CV writing, LinkedIn optimization, and the digital career pathway.</p>
-        <div class="expertise">
-          <span class="tag">Remote Jobs</span><span class="tag">Tech Skills</span><span class="tag">CV Writing</span><span class="tag">LinkedIn</span>
+          <span class="tag">UN System</span><span class="tag">NGO Careers</span><span class="tag">Remote Jobs</span><span class="tag">CV Writing</span><span class="tag">Skills</span>
         </div>
       </div>
     </div>
@@ -179,8 +146,8 @@
     <div class="step">
       <div class="step-num">3</div>
       <div class="step-body">
-        <h3>Accuracy Review</h3>
-        <p>Every published article is reviewed by Lena Hoffmann, our Research and Accuracy Editor, who checks all factual claims against official sources before publication. Discrepancies are resolved by returning to the primary source.</p>
+        <h3>Cross-Check and Accuracy Review</h3>
+        <p>Before publication, all factual claims — deadlines, stipend amounts, eligibility rules, visa requirements — are cross-checked against the official primary source. If a program's details have changed since we last verified them, the article is updated before it goes live.</p>
       </div>
     </div>
     <div class="step">
@@ -248,9 +215,10 @@
 <footer><div class="con"><div class="fg">
 <div class="fa"><a href="https://schollyjob.com/" class="logo"><div class="li">S</div>Scholly<span>Job</span></a><p>SchollyJob covers fully funded scholarships, high-paying remote jobs, study abroad guides, fellowships, and career advice for students and professionals worldwide.</p></div>
 <div class="fc"><h4>Categories</h4><ul><li><a href="https://schollyjob.com/scholarships">Scholarships</a></li><li><a href="https://schollyjob.com/jobs">Jobs</a></li><li><a href="https://schollyjob.com/study-abroad">Study Abroad</a></li><li><a href="https://schollyjob.com/fellowships">Fellowships</a></li><li><a href="https://schollyjob.com/career-tips">Career Tips</a></li></ul></div>
-<div class="fc"><h4>Quick Links</h4><ul><li><a href="https://schollyjob.com/">Home</a></li><li><a href="https://schollyjob.com/about">About Us</a></li><li><a href="https://schollyjob.com/contact">Contact</a></li><li><a href="https://schollyjob.com/privacy-policy">Privacy Policy</a></li><li><a href="https://schollyjob.com/disclaimer">Disclaimer</a></li></ul></div>
+<div class="fc"><h4>Quick Links</h4><ul><li><a href="https://schollyjob.com/">Home</a></li><li><a href="https://schollyjob.com/about">About Us</a></li>
+<li><a href="https://schollyjob.com/editorial">Editorial Team</a></li><li><a href="https://schollyjob.com/contact">Contact</a></li><li><a href="https://schollyjob.com/privacy-policy">Privacy Policy</a></li><li><a href="https://schollyjob.com/terms-of-service">Terms of Service</a></li><li><a href="https://schollyjob.com/disclaimer">Disclaimer</a></li></ul></div>
 </div>
-<div class="fbo"><p>&copy; 2026 SchollyJob. All rights reserved.</p><div style="display:flex;gap:16px;"><a href="https://schollyjob.com/privacy-policy">Privacy</a><a href="https://schollyjob.com/disclaimer">Disclaimer</a><a href="https://schollyjob.com/contact">Contact</a></div></div>
+<div class="fbo"><p>&copy; 2026 SchollyJob. All rights reserved.</p><div style="display:flex;gap:16px;"><a href="https://schollyjob.com/privacy-policy">Privacy</a><a href="https://schollyjob.com/terms-of-service">Terms</a><a href="https://schollyjob.com/disclaimer">Disclaimer</a><a href="https://schollyjob.com/contact">Contact</a></div></div>
 </div></footer>
 <button class="sbt" id="st" aria-label="Back to top">&#8593;</button>
 <script>
@@ -262,4 +230,31 @@ const st=document.getElementById('st');
 window.addEventListener('scroll',()=>st.classList.toggle('v',window.scrollY>400),{passive:true});
 st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
+
+<!-- Cookie Consent Banner -->
+<div id="ck-bar" role="dialog" aria-label="Cookie consent">
+  <p>We use cookies to improve your experience and show relevant ads. See our <a href="https://schollyjob.com/privacy-policy">Privacy Policy</a> for details.</p>
+  <div class="ck-btns">
+    <button class="ck-decline" id="ck-d">Decline</button>
+    <button class="ck-accept" id="ck-a">Accept Cookies</button>
+  </div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('ck-bar');
+  if(!bar) return;
+  if(!localStorage.getItem('ck_consent')){
+    setTimeout(function(){bar.classList.add('show');},800);
+  }
+  document.getElementById('ck-a').addEventListener('click',function(){
+    localStorage.setItem('ck_consent','accepted');
+    bar.classList.remove('show');
+  });
+  document.getElementById('ck-d').addEventListener('click',function(){
+    localStorage.setItem('ck_consent','declined');
+    bar.classList.remove('show');
+  });
+})();
+</script>
+
 </body></html>
