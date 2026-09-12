@@ -1,0 +1,8 @@
+{
+  "//": "SchollyJob — Vercel clean-URL config. Use ONLY if deploying on Vercel. Delete if using Apache (.htaccess), Netlify (_redirects), or Nginx (nginx.conf.txt) instead.",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/:slug.html", "destination": "/:slug", "permanent": true }
+  ]
+}

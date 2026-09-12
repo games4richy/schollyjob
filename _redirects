@@ -1,0 +1,22 @@
+# SchollyJob — Netlify clean-URL config
+# Use this file ONLY if you deploy on Netlify. Delete it if you use
+# Apache (.htaccess), Vercel (vercel.json), or Nginx (nginx.conf.txt) instead.
+#
+# This makes /scholarships serve scholarships.html, /fully-funded-scholarships-2026
+# serve fully-funded-scholarships-2026.html, etc. — matching every internal link,
+# the sitemap, and the canonical tags already in these pages.
+
+/scholarships                                  /scholarships.html                                  200
+/jobs                                          /jobs.html                                          200
+/study-abroad                                  /study-abroad.html                                  200
+/fellowships                                   /fellowships.html                                   200
+/career-tips                                   /career-tips.html                                   200
+/about                                         /about.html                                         200
+/contact                                       /contact.html                                       200
+/editorial                                     /editorial.html                                     200
+/privacy-policy                                /privacy-policy.html                                200
+/terms-of-service                              /terms-of-service.html                              200
+/disclaimer                                    /disclaimer.html                                    200
+/author/kofi-mensah                            /author/kofi-mensah.html                            200
+/author/amara-diallo                           /author/amara-diallo.html                           200
+/:slug                                         /:slug.html                                         200
