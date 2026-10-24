@@ -10,8 +10,6 @@
 <meta property="og:site_name" content="SchollyJob"/>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<!-- AdSense loads only after cookie consent is granted (see consent script before closing body tag) -->
-<!-- Google Analytics loads only after cookie consent is granted (see consent script before closing body tag) -->
 <link rel="canonical" href="https://schollyjob.com/research-fellowships-african-scholars-2026"/>
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="Research Fellowships for Young African Scholars in 2026: Stipends Up to $30,000"/>
@@ -20,6 +18,17 @@
 <link rel="icon" href="https://schollyjob.com/src/favicon-32.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z5F46RBX3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2Z5F46RBX3');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2787088404309540"
+     crossorigin="anonymous"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Research Fellowships for Young African Scholars in 2026: Stipends Up to $30,000","image":"https://schollyjob.com/src/research-fellowships-african-scholars-2026.webp","author":{"@type":"Person","name":"Amara Diallo","url":"https://schollyjob.com/author/amara-diallo"},"publisher":{"@type":"Organization","name":"SchollyJob"},"datePublished":"2026-06-15","dateModified":"2026-06-15","mainEntityOfPage":"https://schollyjob.com/research-fellowships-african-scholars-2026"}</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -358,124 +367,6 @@ st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
     </div>
   </div>
 </div>
-<script>
-(function(){
-  var STORAGE_KEY='ck_consent';
-  var bar=document.getElementById('ck-bar');
-  if(!bar) return;
-  var modalBackdrop=document.getElementById('ck-modal-backdrop');
-  var prefAnalytics=document.getElementById('ck-pref-analytics');
-  var prefAdvertising=document.getElementById('ck-pref-advertising');
 
-  var manageLink=document.getElementById('ck-manage-link');
-  if(manageLink){
-    manageLink.addEventListener('click',function(e){
-      e.preventDefault();
-      openModal();
-    });
-  }
-
-  function getConsent(){
-    try{
-      var raw=localStorage.getItem(STORAGE_KEY);
-      return raw?JSON.parse(raw):null;
-    }catch(e){ return null; }
-  }
-  function setConsent(choice){
-    var consent={
-      necessary:true,
-      analytics:!!choice.analytics,
-      advertising:!!choice.advertising,
-      ts:new Date().toISOString()
-    };
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(consent));
-    return consent;
-  }
-
-  function loadAds(){
-    if(document.getElementById('ck-ads-script')) return;
-    var s=document.createElement('script');
-    s.id='ck-ads-script';
-    s.async=true;
-    s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2787088404309540';
-    s.crossOrigin='anonymous';
-    document.head.appendChild(s);
-  }
-
-  function loadAnalytics(){
-    if(document.getElementById('ck-ga-script')) return;
-    var s=document.createElement('script');
-    s.id='ck-ga-script';
-    s.async=true;
-    s.src='https://www.googletagmanager.com/gtag/js?id=G-2Z5F46RBX3';
-    document.head.appendChild(s);
-    window.dataLayer=window.dataLayer||[];
-    window.gtag=window.gtag||function(){dataLayer.push(arguments);};
-    gtag('js', new Date());
-    gtag('config', 'G-2Z5F46RBX3');
-  }
-
-  function applyConsent(c){
-    if(c.analytics) loadAnalytics();
-    if(c.advertising) loadAds();
-  }
-
-  function openBar(){ bar.classList.add('show'); }
-  function closeBar(){ bar.classList.remove('show'); }
-  function openModal(){
-    var c=getConsent()||{};
-    prefAnalytics.checked=!!c.analytics;
-    prefAdvertising.checked=!!c.advertising;
-    modalBackdrop.classList.add('open');
-  }
-  function closeModal(){ modalBackdrop.classList.remove('open'); }
-
-  var stored=getConsent();
-  if(stored){
-    applyConsent(stored);
-  } else {
-    setTimeout(openBar,800);
-  }
-
-  document.getElementById('ck-a').addEventListener('click',function(){
-    var c=setConsent({analytics:true, advertising:true});
-    applyConsent(c);
-    closeBar();
-  });
-  document.getElementById('ck-d').addEventListener('click',function(){
-    setConsent({analytics:false, advertising:false});
-    closeBar();
-  });
-  document.getElementById('ck-c').addEventListener('click',function(){
-    openModal();
-  });
-
-  document.getElementById('ck-m-cancel').addEventListener('click',function(){
-    closeModal();
-  });
-  document.getElementById('ck-m-save').addEventListener('click',function(){
-    var prev=getConsent();
-    var choice={analytics:prefAnalytics.checked, advertising:prefAdvertising.checked};
-    var turnedOff = prev && ((prev.analytics && !choice.analytics) || (prev.advertising && !choice.advertising));
-    var c=setConsent(choice);
-    closeModal();
-    closeBar();
-    if(turnedOff){
-      // scripts already running can't be fully unloaded without a reload
-      location.reload();
-    } else {
-      applyConsent(c);
-    }
-  });
-
-
-  modalBackdrop.addEventListener('click',function(e){
-    if(e.target===modalBackdrop) closeModal();
-  });
-  document.addEventListener('keydown',function(e){
-    if(e.key==='Escape' && modalBackdrop.classList.contains('open')) closeModal();
-  });
-})();
-</script>
 
 </body></html>
